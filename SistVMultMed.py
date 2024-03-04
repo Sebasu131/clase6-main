@@ -48,7 +48,8 @@ class Mascota:
         self.__fecha_ingreso=f
     def asignarLista_Medicamentos(self,n):
         self.__lista_medicamentos = n 
-    
+#En este código encontramos encapsulamiento por los atributos privados en Medicamentos y Mascota, también podemos verlo representado en métodos Getter 
+# (verNombre(), verDosis(), verHistoria(), etc.) y setter (asignarNombre(), asignarDosis(), asignarHistoria(), etc. en las mismas clases Mascota y Medicamento.
 class sistemaV:
     def __init__(self):
         self.__lista_mascotas = []

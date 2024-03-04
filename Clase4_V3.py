@@ -34,9 +34,13 @@ class Sistema:
     def verificarPaciente(self,cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
-                return True 
+                a=2
+                return a 
+            elif cedula == p.verNombre():
+                a=1
+                return a
         return False
-        
+
     def ingresarPaciente(self,pac):
         self.__lista_pacientes.append(pac)
         return True
@@ -48,7 +52,10 @@ class Sistema:
             #retorne la cedula y la comparo con la ingresada por teclado
             if c == p.verCedula():
                 return p #si encuentro el paciente lo retorno
-            
+            elif c== p.verNombre():
+                return p
+
+
     def verNumeroPacientes(self):
         print("En el sistema hay: " + str(len(self.__lista_pacientes)) + " pacientes") 
 
@@ -82,18 +89,37 @@ def main():
                     print("No ingresado") 
         elif opcion == 2:
             #1. solicito la cedula que quiero buscar
-            c = int(input("Ingrese la cedula a buscar: ")) 
-            #le pido al sistema que me devuelva en la variable p al paciente que tenga
-            #la cedula c en la lista
-            p = sis.verDatosPaciente(c) 
-            #2. si encuentro al paciente imprimo los datos
-            if p != None:
-                print("Nombre: " + p.verNombre()) 
-                print("Cedula: " + str(p.verCedula())) 
-                print("Genero: " + p.verGenero()) 
-                print("Servicio: " + p.verServicio()) 
+            son = input('1. Buscar Nombre 2. Buscar Cedula: ')
+            if son == '2':
+
+                c = int(input("Ingrese la Cedula "))
+                #le pido al sistema que me devuelva en la variable p al paciente que tenga
+                #la cedula c en la lista
+                p = sis.verDatosPaciente(c) 
+                #2. si encuentro al paciente imprimo los datos
+                if p != None:
+                    print("Nombre: " + p.verNombre()) 
+                    print("Cedula: " + str(p.verCedula())) 
+                    print("Genero: " + p.verGenero()) 
+                    print("Servicio: " + p.verServicio()) 
+                else:
+                    print("No existe un paciente con esa Cedula")   
+            elif son == '1':
+                c = (input("Ingrese el nombre "))
+                #le pido al sistema que me devuelva en la variable p al paciente que tenga
+                #la cedula c en la lista
+                p = sis.verDatosPaciente(c) 
+                #2. si encuentro al paciente imprimo los datos
+                if p != None:
+                    print("Nombre: " + p.verNombre()) 
+                    print("Cedula: " + str(p.verCedula())) 
+                    print("Genero: " + p.verGenero()) 
+                    print("Servicio: " + p.verServicio()) 
+                else:
+                    print("No existe un paciente con ese Nombre")
             else:
-                print("No existe un paciente con esa cedula") 
+                break
+
         elif opcion !=0:
             continue 
         else:

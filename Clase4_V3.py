@@ -103,6 +103,7 @@ def main():
 if __name__ == "__main__":
     main() 
     #En este código no se utiliza la herencia, no hay ninguna clase que herede métodos de la otra
+    #En este código tampoco hay polimorfismo, no hay nombres o mensajes similares que actúen de manera distinta para un objeto.
     
         
         

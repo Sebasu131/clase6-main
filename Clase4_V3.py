@@ -102,7 +102,8 @@ def main():
 #aca el python descubre cual es la funcion principal
 if __name__ == "__main__":
     main() 
-        
+    #En este código no se utiliza la herencia, no hay ninguna clase que herede métodos de la otra
+    
         
         
         

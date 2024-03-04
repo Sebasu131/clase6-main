@@ -4,7 +4,7 @@ class Paciente:
         self.__cedula = 0 
         self.__genero = '' 
         self.__servicio = '' 
-              
+    #Constructor de la clase paciente que inicializa los atributos privados ya mencionados.
     #metodos get    
     def verNombre(self):
         return self.__nombre 
@@ -30,7 +30,7 @@ class Paciente:
 class Sistema:    
     def __init__(self):
         self.__lista_pacientes = [] 
-        
+    #Aquí está el constructor para la clase Sistema, encargado de inicializar la clase que almacena los objetos de la clase paciente
     def verificarPaciente(self,cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     main() 
     #En este código no se utiliza la herencia, no hay ninguna clase que herede métodos de la otra
     #En este código tampoco hay polimorfismo, no hay nombres o mensajes similares que actúen de manera distinta para un objeto.
-    
+
         
         
         

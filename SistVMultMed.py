@@ -179,7 +179,7 @@ if __name__=='__main__':
 #En este código no hay herencia, pero se podría imaginar un ejemplo de herencia si tuvieramos clases como perros, gatos, conejos
 #que están relacionados con mascotas
     
-
+#No hay polimorfismos, pero se podría imaginar un método HacerSonido() y ser diferente para cada mascota
 
 
 
